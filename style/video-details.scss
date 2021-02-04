@@ -1,0 +1,401 @@
+@import 'colors';
+main.main{
+    .sidebar{
+        transform: translateX(-100%);
+        transition:200ms ease-in-out;
+        z-index:5;
+        &.hidden{
+            transform: translateX(0)!important;
+        }
+    }
+    .content{
+        width: 100% !important;
+        left:0!important;
+        padding:30px 70px!important;
+        display: flex;
+        .left-section{
+            flex:1;
+            margin-right: 20px;
+            .video{
+                height: 520px;
+              
+            }
+            .video-meta{
+                .meta{
+                    margin-top:20px;  
+                    .video-title{
+                        font-weight: 400;
+                        font-size:18px;
+                    }  
+                    .analytics{
+                        display:flex;
+                        justify-content: space-between;
+                        border-bottom:1px solid #ddd;
+                        margin-top:10px;
+                        height: 40px;  
+                        .view{
+                            font-size:14px;
+                            color:$icon-color;
+                        }
+                        .analytics-icon{
+                            display:flex;
+                            i,span{
+                                color:$gray-color;
+                                cursor:pointer;    
+                            }
+                            span{
+                                font-size:14px;
+                                font-weight: 500;  
+                            }
+                            span.align-span{
+                                display:inline-flex;
+                                align-items: center;
+                            }
+                            span:not(:last-child){
+                                margin-right:10px;
+                                
+                            }
+                            i{
+                                margin-right:8px;
+                                font-weight: 600;
+                                font-size:20px;
+                            }
+                            .like-dislike{
+                                border-bottom:3px solid #CCCCCC;
+                                position: relative;
+                                margin-right: 10px;
+                                span{
+                                    margin-right:10px;
+                                    font-size:14px;
+                                    font-size:500;
+                                }
+                               
+                                span.align-span{
+                                    display:inline-flex;
+                                    align-items: center;
+                                    &:last-child{
+                                        margin:0;
+                                    }
+                                    .dislike-span{
+                                        margin:0;
+                                    }
+                                }
+                                i{
+                                    margin-right:8px;
+                                    font-size:20px;
+                                }
+                                &::after{
+                                    content:"";
+                                    position:absolute;
+                                    width: 55%;
+                                    height: 3px;
+                                    left:0;
+                                    bottom:-3px;
+                                    background-color:$gray-color;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .video-description{
+                padding:20px 0;
+                border-bottom: 1px solid #ddd;
+                .video-info{
+                    display:flex;
+                    align-items: center;
+                    .video-avatar{
+                        width:48px;
+                        height:48px;
+                        border-radius:50%;
+                        margin-right:10px;
+                    }
+                    .video-author{
+                        flex:1;
+                        h3{
+                            font-size:14px;
+                            color:$primary-text-color;
+                            font-weight: 500;
+                        }
+                        span{
+                            font-size:13px;
+                            color:$icon-color;
+                        }
+                    }
+                    .subscribe-button{
+                        padding:10px 16px;
+                        background-color:#cc0000;
+                        color:white;
+                        text-transform: uppercase;
+                        font-size:14px;
+                    }
+                }
+                .video-text{
+                    max-width: 650px;
+                    height: 70px;
+                    overflow: hidden;
+                    margin:10px 200px 20px 58px;
+                    font-size:14px;
+                    color:$primary-text-color;
+                    line-height: 2.1rem;
+                }
+                .show-more{
+                    color:$icon-color;
+                    font-weight: 500;
+                    font-size:13px;
+                    cursor:pointer;
+                    margin-left: 58px;
+                }
+            }
+            .add-comment{
+                padding:20px 0;
+                .comment-analytics{
+                    margin:0 0 24px;
+                    .comment-ranking{
+                        font-size:14px;
+                        text-transform:uppercase;
+                        color:$icon-color;
+                        font-weight: 500;
+                        display:inline-flex;
+                        align-items:center;
+                        justify-content:center;
+                        .fa-caret-square-down{
+                            width: 24px;
+                            height: 24px;
+                            font-size:20px;
+                            margin:0 8px 0 0;
+                            display:inline-flex;
+                            align-items:center;
+                            justify-content:center;
+                        }
+                    }
+                }
+                .comment-count{
+                    font-size:16px;
+                    color:$primary-text-color;
+                    margin-right:30px;
+                }
+                .comment-inputs{
+                    form{
+                        .inputs{
+                            display:flex;
+                            .avatar-img{
+                                width: 40px;
+                                height: 40px;
+                            }
+                            .comment-input{
+                                flex:1;
+                                border:none;
+                                border-bottom:1px solid #ddd;
+                                margin-left:10px;
+                                background-color:transparent;
+                                transition:400ms all;
+                                &:focus{
+                                    outline:none;
+                                    font-size:14px;
+                                    border-bottom:3px solid $icon-color;
+                                }
+                                &::placeholder{
+                                    font-size:14px;
+                                }
+                            }
+                            
+                        }
+                        .buttons{
+                            display:flex;
+                            justify-content:flex-end;
+                            margin-top:10px;
+                            .btn{
+                                padding:10px 16px;
+                                color:white;
+                                text-transform:uppercase;
+                                border-radius:2px;
+                                font-size: 14px;
+                                font-weight: 500;
+                            }
+                            .btn:first-of-type{
+                                margin-right:5px;
+                                color:$icon-color;
+                            }
+                            .btn-blue{
+                                background-color:#065FD4;
+                            }
+                        }
+
+                    }
+                }
+            }
+            .comments{              
+                width: 95%;
+                    .comment-main{
+                        &.sub-comment{
+                            margin:20px 0 10px 60px;
+                            display: none; 
+                            &.hidden{
+                                display: block;
+                            }
+                            .comment{
+                                .avatar-img{
+                                    width: 24px;
+                                    height: 24px;
+                                    margin-right: 15px;
+                                }
+                            }    
+                        }
+                        .comment{
+                            display:flex;
+                            margin-bottom:20px;
+                           
+                        .avatar-img{
+                            width: 40px;
+                            height:40px;
+                            margin-right:20px;
+                        } 
+                        .comment-include{
+                            div.header{
+                                font-size:13px;
+                                margin:0 0 8px 0;
+                                color:$primary-text-color;
+                                .comment-name{
+                                    font-weight: 500;
+                                }
+                                .comment-date{
+                                    color:$gray-color;
+                                }
+                            }
+                            .comment-p{
+                                font-size:14px;
+                                margin: 0 0 8px 0;
+                            }
+                            .like-dislike{
+                                font-size:13px;
+                                font-weight: 500;
+                                color:$icon-color;
+                                i{
+                                    padding:8px;
+                                    font-size:14px;
+                                    color:$gray-color;
+                                    &:hover{
+                                        color:$icon-color;
+                                    }
+                                    cursor:pointer;
+                                    &:first-of-type{
+                                        padding-left:0;
+                                    }
+                                }
+                                span.reply{
+                                    cursor:pointer;
+                                    padding:4px 10px;
+                                }
+                            }
+                            .reply-dialog{
+                                display: none;
+                                margin:10px 0 0 0;
+                                &.hidden{
+                                    display:block;
+                                }
+                                form{
+                                    .inputs{
+                                        display:flex;
+                                        .avatar-img{
+                                            width: 24px;
+                                            height: 24px;
+                                        }
+                                        .comment-input{
+                                            flex:1;
+                                            border:none;
+                                            border-bottom:1px solid #ddd;
+                                            background-color:transparent;
+                                            transition:400ms all;
+                                            &:focus{
+                                                outline:none;
+                                                font-size:14px;
+                                                border-bottom:3px solid $icon-color;
+                                            }
+                                            &::placeholder{
+                                                font-size:14px;
+                                            }
+                                        }
+                                        
+                                    }
+                                    .buttons{
+                                        display:flex;
+                                        justify-content:flex-end;
+                                        margin-top:10px;
+                                        .btn{
+                                            padding:10px 16px;
+                                            color:white;
+                                            text-transform:uppercase;
+                                            border-radius:2px;
+                                            font-size: 14px;
+                                            font-weight: 500;
+                                        }
+                                        .btn:first-of-type{
+                                            margin-right:5px;
+                                            color:$icon-color;
+                                        }
+                                        .btn-blue{
+                                            background-color:#065FD4;
+                                        }
+                                    }
+            
+                                }
+                            }
+                            .show-sub-comment{
+                                font-size:14px;
+                                color:blue;
+                                font-weight: 500;
+                                cursor:pointer;
+                            }
+                        }   
+                       }
+                    
+                    } 
+            }
+        }
+        .right-video-sidebar{
+            width: 30%;
+            height: auto;
+            @media screen and (max-width:1024px){
+                display:none;
+            }
+            .box.mini-box{
+                width: 100%;
+                display: flex;
+                height:100px;
+                margin-bottom:10px;
+               
+                .img{
+                    img{
+                        width: 168px;
+                        min-width: 168px;
+                        min-height: auto;
+                    }
+                }
+                .video-info{
+                    margin:0 0 0 10px;
+                    .meta{
+                        .video-author{
+                            margin:5px 0 0 0;
+                            font-size:13px;
+                        }
+                        .analytics{
+                            font-size:13px;
+                        }
+                        .new{
+                            margin-top:4px;
+                            font-weight: 500;
+                            background-color:#0000000d;
+                            color:#606060;
+                            font-size:12px;
+                            padding:2px;
+                            width: 40px;
+                            text-align:center;
+                        }
+                    }
+                }
+            }
+            
+        }
+    }
+}

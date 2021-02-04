@@ -1,0 +1,536 @@
+main.main .sidebar {
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  -webkit-transition: 200ms ease-in-out;
+  transition: 200ms ease-in-out;
+  z-index: 5;
+}
+
+main.main .sidebar.hidden {
+  -webkit-transform: translateX(0) !important;
+          transform: translateX(0) !important;
+}
+
+main.main .content {
+  width: 100% !important;
+  left: 0 !important;
+  padding: 30px 70px !important;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main.main .content .left-section {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  margin-right: 20px;
+}
+
+main.main .content .left-section .video {
+  height: 520px;
+}
+
+main.main .content .left-section .video-meta .meta {
+  margin-top: 20px;
+}
+
+main.main .content .left-section .video-meta .meta .video-title {
+  font-weight: 400;
+  font-size: 18px;
+}
+
+main.main .content .left-section .video-meta .meta .analytics {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-bottom: 1px solid #ddd;
+  margin-top: 10px;
+  height: 40px;
+}
+
+main.main .content .left-section .video-meta .meta .analytics .view {
+  font-size: 14px;
+  color: #606060;
+}
+
+main.main .content .left-section .video-meta .meta .analytics .analytics-icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main.main .content .left-section .video-meta .meta .analytics .analytics-icon i, main.main .content .left-section .video-meta .meta .analytics .analytics-icon span {
+  color: #909090;
+  cursor: pointer;
+}
+
+main.main .content .left-section .video-meta .meta .analytics .analytics-icon span {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+main.main .content .left-section .video-meta .meta .analytics .analytics-icon span.align-span {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main.main .content .left-section .video-meta .meta .analytics .analytics-icon span:not(:last-child) {
+  margin-right: 10px;
+}
+
+main.main .content .left-section .video-meta .meta .analytics .analytics-icon i {
+  margin-right: 8px;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+main.main .content .left-section .video-meta .meta .analytics .analytics-icon .like-dislike {
+  border-bottom: 3px solid #CCCCCC;
+  position: relative;
+  margin-right: 10px;
+}
+
+main.main .content .left-section .video-meta .meta .analytics .analytics-icon .like-dislike span {
+  margin-right: 10px;
+  font-size: 14px;
+  font-size: 500;
+}
+
+main.main .content .left-section .video-meta .meta .analytics .analytics-icon .like-dislike span.align-span {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main.main .content .left-section .video-meta .meta .analytics .analytics-icon .like-dislike span.align-span:last-child {
+  margin: 0;
+}
+
+main.main .content .left-section .video-meta .meta .analytics .analytics-icon .like-dislike span.align-span .dislike-span {
+  margin: 0;
+}
+
+main.main .content .left-section .video-meta .meta .analytics .analytics-icon .like-dislike i {
+  margin-right: 8px;
+  font-size: 20px;
+}
+
+main.main .content .left-section .video-meta .meta .analytics .analytics-icon .like-dislike::after {
+  content: "";
+  position: absolute;
+  width: 55%;
+  height: 3px;
+  left: 0;
+  bottom: -3px;
+  background-color: #909090;
+}
+
+main.main .content .left-section .video-description {
+  padding: 20px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+main.main .content .left-section .video-description .video-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main.main .content .left-section .video-description .video-info .video-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+main.main .content .left-section .video-description .video-info .video-author {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+main.main .content .left-section .video-description .video-info .video-author h3 {
+  font-size: 14px;
+  color: #030303;
+  font-weight: 500;
+}
+
+main.main .content .left-section .video-description .video-info .video-author span {
+  font-size: 13px;
+  color: #606060;
+}
+
+main.main .content .left-section .video-description .video-info .subscribe-button {
+  padding: 10px 16px;
+  background-color: #cc0000;
+  color: white;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+main.main .content .left-section .video-description .video-text {
+  max-width: 650px;
+  height: 70px;
+  overflow: hidden;
+  margin: 10px 200px 20px 58px;
+  font-size: 14px;
+  color: #030303;
+  line-height: 2.1rem;
+}
+
+main.main .content .left-section .video-description .show-more {
+  color: #606060;
+  font-weight: 500;
+  font-size: 13px;
+  cursor: pointer;
+  margin-left: 58px;
+}
+
+main.main .content .left-section .add-comment {
+  padding: 20px 0;
+}
+
+main.main .content .left-section .add-comment .comment-analytics {
+  margin: 0 0 24px;
+}
+
+main.main .content .left-section .add-comment .comment-analytics .comment-ranking {
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #606060;
+  font-weight: 500;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main.main .content .left-section .add-comment .comment-analytics .comment-ranking .fa-caret-square-down {
+  width: 24px;
+  height: 24px;
+  font-size: 20px;
+  margin: 0 8px 0 0;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main.main .content .left-section .add-comment .comment-count {
+  font-size: 16px;
+  color: #030303;
+  margin-right: 30px;
+}
+
+main.main .content .left-section .add-comment .comment-inputs form .inputs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main.main .content .left-section .add-comment .comment-inputs form .inputs .avatar-img {
+  width: 40px;
+  height: 40px;
+}
+
+main.main .content .left-section .add-comment .comment-inputs form .inputs .comment-input {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  border: none;
+  border-bottom: 1px solid #ddd;
+  margin-left: 10px;
+  background-color: transparent;
+  -webkit-transition: 400ms all;
+  transition: 400ms all;
+}
+
+main.main .content .left-section .add-comment .comment-inputs form .inputs .comment-input:focus {
+  outline: none;
+  font-size: 14px;
+  border-bottom: 3px solid #606060;
+}
+
+main.main .content .left-section .add-comment .comment-inputs form .inputs .comment-input::-webkit-input-placeholder {
+  font-size: 14px;
+}
+
+main.main .content .left-section .add-comment .comment-inputs form .inputs .comment-input:-ms-input-placeholder {
+  font-size: 14px;
+}
+
+main.main .content .left-section .add-comment .comment-inputs form .inputs .comment-input::-ms-input-placeholder {
+  font-size: 14px;
+}
+
+main.main .content .left-section .add-comment .comment-inputs form .inputs .comment-input::placeholder {
+  font-size: 14px;
+}
+
+main.main .content .left-section .add-comment .comment-inputs form .buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin-top: 10px;
+}
+
+main.main .content .left-section .add-comment .comment-inputs form .buttons .btn {
+  padding: 10px 16px;
+  color: white;
+  text-transform: uppercase;
+  border-radius: 2px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+main.main .content .left-section .add-comment .comment-inputs form .buttons .btn:first-of-type {
+  margin-right: 5px;
+  color: #606060;
+}
+
+main.main .content .left-section .add-comment .comment-inputs form .buttons .btn-blue {
+  background-color: #065FD4;
+}
+
+main.main .content .left-section .comments {
+  width: 95%;
+}
+
+main.main .content .left-section .comments .comment-main.sub-comment {
+  margin: 20px 0 10px 60px;
+  display: none;
+}
+
+main.main .content .left-section .comments .comment-main.sub-comment.hidden {
+  display: block;
+}
+
+main.main .content .left-section .comments .comment-main.sub-comment .comment .avatar-img {
+  width: 24px;
+  height: 24px;
+  margin-right: 15px;
+}
+
+main.main .content .left-section .comments .comment-main .comment {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 20px;
+}
+
+main.main .content .left-section .comments .comment-main .comment .avatar-img {
+  width: 40px;
+  height: 40px;
+  margin-right: 20px;
+}
+
+main.main .content .left-section .comments .comment-main .comment .comment-include div.header {
+  font-size: 13px;
+  margin: 0 0 8px 0;
+  color: #030303;
+}
+
+main.main .content .left-section .comments .comment-main .comment .comment-include div.header .comment-name {
+  font-weight: 500;
+}
+
+main.main .content .left-section .comments .comment-main .comment .comment-include div.header .comment-date {
+  color: #909090;
+}
+
+main.main .content .left-section .comments .comment-main .comment .comment-include .comment-p {
+  font-size: 14px;
+  margin: 0 0 8px 0;
+}
+
+main.main .content .left-section .comments .comment-main .comment .comment-include .like-dislike {
+  font-size: 13px;
+  font-weight: 500;
+  color: #606060;
+}
+
+main.main .content .left-section .comments .comment-main .comment .comment-include .like-dislike i {
+  padding: 8px;
+  font-size: 14px;
+  color: #909090;
+  cursor: pointer;
+}
+
+main.main .content .left-section .comments .comment-main .comment .comment-include .like-dislike i:hover {
+  color: #606060;
+}
+
+main.main .content .left-section .comments .comment-main .comment .comment-include .like-dislike i:first-of-type {
+  padding-left: 0;
+}
+
+main.main .content .left-section .comments .comment-main .comment .comment-include .like-dislike span.reply {
+  cursor: pointer;
+  padding: 4px 10px;
+}
+
+main.main .content .left-section .comments .comment-main .comment .comment-include .reply-dialog {
+  display: none;
+  margin: 10px 0 0 0;
+}
+
+main.main .content .left-section .comments .comment-main .comment .comment-include .reply-dialog.hidden {
+  display: block;
+}
+
+main.main .content .left-section .comments .comment-main .comment .comment-include .reply-dialog form .inputs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main.main .content .left-section .comments .comment-main .comment .comment-include .reply-dialog form .inputs .avatar-img {
+  width: 24px;
+  height: 24px;
+}
+
+main.main .content .left-section .comments .comment-main .comment .comment-include .reply-dialog form .inputs .comment-input {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  border: none;
+  border-bottom: 1px solid #ddd;
+  background-color: transparent;
+  -webkit-transition: 400ms all;
+  transition: 400ms all;
+}
+
+main.main .content .left-section .comments .comment-main .comment .comment-include .reply-dialog form .inputs .comment-input:focus {
+  outline: none;
+  font-size: 14px;
+  border-bottom: 3px solid #606060;
+}
+
+main.main .content .left-section .comments .comment-main .comment .comment-include .reply-dialog form .inputs .comment-input::-webkit-input-placeholder {
+  font-size: 14px;
+}
+
+main.main .content .left-section .comments .comment-main .comment .comment-include .reply-dialog form .inputs .comment-input:-ms-input-placeholder {
+  font-size: 14px;
+}
+
+main.main .content .left-section .comments .comment-main .comment .comment-include .reply-dialog form .inputs .comment-input::-ms-input-placeholder {
+  font-size: 14px;
+}
+
+main.main .content .left-section .comments .comment-main .comment .comment-include .reply-dialog form .inputs .comment-input::placeholder {
+  font-size: 14px;
+}
+
+main.main .content .left-section .comments .comment-main .comment .comment-include .reply-dialog form .buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin-top: 10px;
+}
+
+main.main .content .left-section .comments .comment-main .comment .comment-include .reply-dialog form .buttons .btn {
+  padding: 10px 16px;
+  color: white;
+  text-transform: uppercase;
+  border-radius: 2px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+main.main .content .left-section .comments .comment-main .comment .comment-include .reply-dialog form .buttons .btn:first-of-type {
+  margin-right: 5px;
+  color: #606060;
+}
+
+main.main .content .left-section .comments .comment-main .comment .comment-include .reply-dialog form .buttons .btn-blue {
+  background-color: #065FD4;
+}
+
+main.main .content .left-section .comments .comment-main .comment .comment-include .show-sub-comment {
+  font-size: 14px;
+  color: blue;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+main.main .content .right-video-sidebar {
+  width: 30%;
+  height: auto;
+}
+
+@media screen and (max-width: 1024px) {
+  main.main .content .right-video-sidebar {
+    display: none;
+  }
+}
+
+main.main .content .right-video-sidebar .box.mini-box {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100px;
+  margin-bottom: 10px;
+}
+
+main.main .content .right-video-sidebar .box.mini-box .img img {
+  width: 168px;
+  min-width: 168px;
+  min-height: auto;
+}
+
+main.main .content .right-video-sidebar .box.mini-box .video-info {
+  margin: 0 0 0 10px;
+}
+
+main.main .content .right-video-sidebar .box.mini-box .video-info .meta .video-author {
+  margin: 5px 0 0 0;
+  font-size: 13px;
+}
+
+main.main .content .right-video-sidebar .box.mini-box .video-info .meta .analytics {
+  font-size: 13px;
+}
+
+main.main .content .right-video-sidebar .box.mini-box .video-info .meta .new {
+  margin-top: 4px;
+  font-weight: 500;
+  background-color: #0000000d;
+  color: #606060;
+  font-size: 12px;
+  padding: 2px;
+  width: 40px;
+  text-align: center;
+}
+/*# sourceMappingURL=video-details.css.map */
