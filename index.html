@@ -4,12 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <link rel="stylesheet" href="style/style.css">
     <title>Youtube Website Design</title>
 </head>
 
 <body>
+    <div class="transparent-bg"></div>
     <header class="header-top">
         <div class="container">
             <div class="logo">
@@ -18,13 +19,17 @@
             </div>
             <div class="search-box">
                 <form action="">
+                    <i class="fas fa-arrow-left"></i>
                     <input type="text" placeholder="Ara..">
-                    <button type="submit"><i class="fas fa-search"></i></button>
+                    <button type="submit" value="submit"><i class="fas fa-search"></i></button>
                     <a href=""><i class="fas fa-microphone"></i></a>
                 </form>
             </div>
             <nav class="header-nav">
                 <ul>
+                    <li>
+                        <a href=""><i class="fas fa-search"></i></a>
+                    </li>
                     <li>
                         <a href=""><i class="fas fa-video"></i></a>
                     </li>
@@ -43,11 +48,11 @@
     </header>
     <!-- HEADER FINISH -->
 
-    <!-- SIDEBAR -->
+  
+        <!-- SIDEBAR -->
     <main class="main">
-
-
-        <div class="sidebar">
+        <div class="left-side">
+        <div class="sidebar " id="sidebar-home">
             <ul>
                 <li>
                     <a href="" class="active">
@@ -173,10 +178,10 @@
                     </a>
                 </li>
             </ul>
-
-
         </div>
         <!-- MINI SIDEBAR FINISH -->
+    </div>
+  </div>
         <!-- CONTENT -->
         <div class="content">
             <div class="box">

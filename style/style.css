@@ -10,6 +10,11 @@
 body, html {
   background-color: #F9F9F9;
   height: 100%;
+  width: 100%;
+}
+
+.transparent-bg {
+  display: none;
 }
 
 a {
@@ -33,10 +38,9 @@ i {
 
 .header-top {
   background-color: #fff;
-  position: -webkit-sticky;
-  position: sticky;
+  position: fixed;
   top: 0;
-  z-index: 3;
+  z-index: 5;
   width: 100%;
 }
 
@@ -114,6 +118,27 @@ i {
           justify-content: center;
 }
 
+.header-top .container .search-box.show {
+  display: block;
+}
+
+@media screen and (max-width: 650px) {
+  .header-top .container .search-box {
+    width: 100%;
+    top: 10;
+    position: absolute;
+    background-color: white;
+    z-index: 10;
+    display: none;
+  }
+  .header-top .container .search-box form i.fa-arrow-left {
+    display: -webkit-inline-box !important;
+    display: -ms-inline-flexbox !important;
+    display: inline-flex !important;
+    cursor: pointer;
+  }
+}
+
 .header-top .container .search-box form {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -157,6 +182,10 @@ i {
   font-size: 20px;
 }
 
+.header-top .container .search-box form i.fa-arrow-left {
+  display: none;
+}
+
 .header-top .container .header-nav {
   width: 190px;
 }
@@ -172,6 +201,10 @@ i {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+.header-top .container .header-nav ul li i.fas.fa-search {
+  display: none;
 }
 
 .header-top .container .header-nav ul li:not(:last-child) {
@@ -201,9 +234,21 @@ main.main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin-top: 56px;
 }
 
-main.main div.sidebar {
+main.main .left-side {
+  width: 250px;
+  margin-right: 20px;
+}
+
+main.main .left-side.re-size {
+  width: 70px;
+}
+
+main.main .left-side div.sidebar {
+  -webkit-transition: 300ms all ease-in-out;
+  transition: 300ms all ease-in-out;
   width: 250px;
   min-width: 250px;
   max-height: 93vh;
@@ -214,32 +259,33 @@ main.main div.sidebar {
           flex-direction: column;
   overflow: hidden;
   background-color: #fff;
+  z-index: 20;
 }
 
-main.main div.sidebar.hidden {
+main.main .left-side div.sidebar.hidden {
   -webkit-transform: translateX(-100%);
           transform: translateX(-100%);
 }
 
-main.main div.sidebar:hover {
+main.main .left-side div.sidebar:hover {
   overflow-y: auto;
 }
 
-main.main div.sidebar hr {
+main.main .left-side div.sidebar hr {
   color: #606060;
 }
 
-main.main div.sidebar ul {
+main.main .left-side div.sidebar ul {
   list-style: none;
 }
 
-main.main div.sidebar ul.subscribe-list li h5 {
+main.main .left-side div.sidebar ul.subscribe-list li h5 {
   color: #606060;
   font-weight: 500;
   font-size: 14px;
 }
 
-main.main div.sidebar ul.subscribe-list li a {
+main.main .left-side div.sidebar ul.subscribe-list li a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -249,17 +295,17 @@ main.main div.sidebar ul.subscribe-list li a {
   position: relative;
 }
 
-main.main div.sidebar ul.subscribe-list li a img.avatar-img {
+main.main .left-side div.sidebar ul.subscribe-list li a img.avatar-img {
   margin-right: 10px;
 }
 
-main.main div.sidebar ul.subscribe-list li a i.stream {
+main.main .left-side div.sidebar ul.subscribe-list li a i.stream {
   position: absolute;
   left: 150px;
   color: red;
 }
 
-main.main div.sidebar li {
+main.main .left-side div.sidebar li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -269,19 +315,19 @@ main.main div.sidebar li {
   padding: 5px 25px;
 }
 
-main.main div.sidebar li:hover {
+main.main .left-side div.sidebar li:hover {
   background-color: #eeeeee;
 }
 
-main.main div.sidebar li:first-child {
+main.main .left-side div.sidebar li:first-child {
   margin-top: 10px;
 }
 
-main.main div.sidebar li span:first-of-type {
+main.main .left-side div.sidebar li span:first-of-type {
   font-size: 15px;
 }
 
-main.main div.sidebar li a {
+main.main .left-side div.sidebar li a {
   color: #030303;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -293,11 +339,11 @@ main.main div.sidebar li a {
   width: 100%;
 }
 
-main.main div.sidebar li a.active i {
+main.main .left-side div.sidebar li a.active i {
   color: red;
 }
 
-main.main div.sidebar li a i {
+main.main .left-side div.sidebar li a i {
   width: 24px;
   height: 24px;
   font-size: 18px;
@@ -312,11 +358,11 @@ main.main div.sidebar li a i {
           align-items: center;
 }
 
-main.main div.sidebar li a i:first-child {
+main.main .left-side div.sidebar li a i:first-child {
   margin-right: 15px;
 }
 
-main.main div.mini-sidebar {
+main.main .left-side div.mini-sidebar {
   position: fixed;
   width: 70px;
   height: 100%;
@@ -324,11 +370,11 @@ main.main div.mini-sidebar {
   display: none;
 }
 
-main.main div.mini-sidebar.show {
+main.main .left-side div.mini-sidebar.show {
   display: block;
 }
 
-main.main div.mini-sidebar ul li a {
+main.main .left-side div.mini-sidebar ul li a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -343,19 +389,19 @@ main.main div.mini-sidebar ul li a {
   color: #606060;
 }
 
-main.main div.mini-sidebar ul li a.active span, main.main div.mini-sidebar ul li a.active i {
+main.main .left-side div.mini-sidebar ul li a.active span, main.main .left-side div.mini-sidebar ul li a.active i {
   color: red;
 }
 
-main.main div.mini-sidebar ul li a:hover {
+main.main .left-side div.mini-sidebar ul li a:hover {
   background-color: #eeeeee;
 }
 
-main.main div.mini-sidebar ul li a span {
+main.main .left-side div.mini-sidebar ul li a span {
   font-size: 12px;
 }
 
-main.main div.mini-sidebar ul li a i {
+main.main .left-side div.mini-sidebar ul li a i {
   font-size: 18px;
   margin-bottom: 10px;
 }
@@ -371,13 +417,9 @@ main.main div.content {
           justify-content: space-between;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  left: 250px;
-  width: calc(100% - 250px);
-}
-
-main.main div.content.big-content {
-  width: calc(100% - 70px);
-  left: 70px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
 
 main.main div.content .box {
@@ -447,5 +489,38 @@ main.main div.content .box .video-info .meta .video-author {
 
 main.main div.content .box .video-info .meta .analytics {
   color: #606060;
+}
+
+@media screen and (max-width: 1350px) {
+  .left-side {
+    width: 70px !important;
+  }
+  .mini-sidebar {
+    display: block !important;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .content .box {
+    width: 32% !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .content .box {
+    width: 49% !important;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .content .box {
+    width: 100% !important;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .header-nav ul li i.fas.fa-search {
+    display: block !important;
+  }
 }
 /*# sourceMappingURL=style.css.map */
