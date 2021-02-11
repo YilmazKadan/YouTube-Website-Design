@@ -23,14 +23,14 @@ body{
 main.main{
     .left-side{
         position: absolute;
-        .sidebar{
-            transform: translateX(-100%)  !important;
+        .sidebar#sidebar-two{
+            transform: translateX(-100%);
             transition:200ms ease-in-out;
             width: 200px;
             position: absolute;
             z-index:5;
             &.hidden{
-                transform: translateX(0%)  !important;
+                transform: translateX(0%);
             }
         }
 
@@ -430,16 +430,10 @@ main.main{
         }
     }
 }
-@media screen and (max-width:1350px){
-    
-     .mini-sidebar{
-         display:block !important;
-     }
- }
  @media screen and (max-width:768px){
-     .main{
+     main.main{
          .content#video-details-content{
-            padding:10px!important;
+            padding:10px;
          }
          .meta{
              .analytics{
@@ -453,4 +447,4 @@ main.main{
          }
 
      }
- }
+ }}
